@@ -14,11 +14,11 @@
         extend: {
           colors: {
           
-          'celadon-primary': '#0074d9',
-          'celadon-secondary': '#1e90ff',
-          'celadon-dark': '#0056b3',
-          'celadon-light': '#e6f2ff',
-          'celadon-accent': '#7fdbff',
+          'celadon-primary': '#B3D0CA', // 浅青瓷色
+          'celadon-secondary': '#D6E5DE', // 更浅的青瓷色
+          'celadon-dark': '#8AA89E', // 深一点的青瓷色
+          'celadon-light': '#F0F7F3', // 非常浅的青瓷色
+          'celadon-accent': '#A5C4B8', // 青瓷强调色
             
           },
           fontFamily: {
@@ -32,28 +32,28 @@
 
   <canvas id="bg-bubbles" style="position:fixed;z-index:0;top:0;left:0;width:100vw;height:100vh;pointer-events:none;"></canvas>
   <!-- 导航栏 -->
-  <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-3 bg-gradient-to-r from-celadon-primary via-celadon-accent to-celadon-secondary bg-opacity-90 backdrop-blur-sm shadow-sm">
+  <nav id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 py-3 bg-gradient-to-r from-celadon-light via-celadon-primary to-celadon-light bg-opacity-70 backdrop-blur-sm shadow-sm border-b border-celadon-accent/30">
     <div class="container mx-auto px-4">
       <div class="flex justify-between items-center">
         <a href="#" class="flex items-center">
           <img src="./队徽/校徽.png" alt="北科校徽" class="h-14">
           <img src="./队徽/队徽.png" alt="龙窑青韵 logo" class="h-14">
-          <span class="ml-2 text-xl font-bold text-celadon-8" style="color: #B3D0CA;">龙窑青韵队</span>
+          <span class="ml-2 text-xl font-bold text-celadon-8" style="color: #629b8f;">龙窑青韵队</span>
         </a>
        
         
         <!-- 桌面导航 -->
         <div class="hidden md:flex space-x-4">
-          <a href="#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          <a href="#team" class="px-4 py-2 rounded-md text-celadon-primary bg-celadon-light/50 hover:bg-celadon-light transition-colors border border-celadon-accent/30">
             团队介绍
           </a>
-          <a href="#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          <a href="#process" class="px-4 py-2 rounded-md text-celadon-dark bg-celadon-accent/50 hover:bg-celadon-accent/70 transition-colors border border-celadon-accent/30">
             烧制过程
           </a>
-          <a href="#masters" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          <a href="#masters" class="px-4 py-2 rounded-md text-celadon-dark bg-celadon-secondary/50 hover:bg-celadon-secondary/70 transition-colors border border-celadon-accent/30">
             大师风采
           </a>
-          <a href="#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          <a href="#contact" class="px-4 py-2 rounded-md text-celadon-primary bg-celadon-light/50 hover:bg-celadon-light transition-colors border border-celadon-accent/30">
             联系我们
           </a>
         </div>
@@ -67,10 +67,10 @@
       <!-- 移动端导航菜单 -->
       <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
         <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
-          <a href="#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
-          <a href="#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
-          <a href="#masters" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">青瓷大师风采</a>
-          <a href="#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+          <a href="#team" class="py-2 px-4 rounded-md text-celadon-primary bg-celadon-light/50 hover:bg-celadon-light transition-colors border border-celadon-accent/30">团队介绍</a>
+          <a href="#process" class="py-2 px-4 rounded-md text-celadon-dark bg-celadon-accent/50 hover:bg-celadon-accent/70 transition-colors border border-celadon-accent/30">烧制过程</a>
+          <a href="#masters" class="py-2 px-4 rounded-md text-celadon-dark bg-celadon-secondary/50 hover:bg-celadon-secondary/70 transition-colors border border-celadon-accent/30">青瓷大师风采</a>
+          <a href="#contact" class="py-2 px-4 rounded-md text-celadon-primary bg-celadon-light/50 hover:bg-celadon-light transition-colors border border-celadon-accent/30">联系我们</a>
         </div>
       </div>
     </nav>
