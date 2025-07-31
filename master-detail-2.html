@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>青瓷大师 - 李师傅</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  
+  <!-- 配置Tailwind自定义颜色和字体 -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            celadon: {
+              primary: '#0074d9',
+              secondary: '#4CAF50',
+              accent: '#FF9800',
+              dark: '#0F4C81',
+              light: '#E6F7FF'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  
+  <!-- 自定义工具类 -->
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      }
+      .hover-scale {
+        transition: transform 0.3s ease;
+      }
+      .hover-scale:hover {
+        transform: scale(1.03);
+      }
+      .bg-gradient-celadon {
+        background: linear-gradient(135deg, #0074d9 0%, #0F4C81 100%);
+      }
+    }
+  </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50">
+  <!-- 导航栏 -->
+  <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-white/90 backdrop-blur-md shadow-sm">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <div class="flex items-center">
+        <i class="fa fa-leaf text-celadon-primary mr-2 text-xl"></i>
+        <span class="text-xl font-bold text-celadon-dark">龙窑青韵队</span>
+      </div>
+      
+      <!-- 桌面导航 -->
+      <div class="hidden md:flex space-x-4">
+        <a href="index.html#team" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          团队介绍
+        </a>
+        <a href="index.html#process" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          烧制过程
+        </a>
+        <a href="index.html#masters" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          大师风采
+        </a>
+        <a href="index.html#contact" class="px-4 py-2 rounded-md text-celadon-primary hover:bg-celadon-light transition-colors">
+          联系我们
+        </a>
+      </div>
+      
+      <!-- 移动端菜单按钮 -->
+      <button id="menu-toggle" class="md:hidden text-celadon-primary">
+        <i class="fa fa-bars text-xl"></i>
+      </button>
+    </div>
+    
+    <!-- 移动端导航菜单 -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+      <div class="container mx-auto px-4 py-2 flex flex-col space-y-2">
+        <a href="index.html#team" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">团队介绍</a>
+        <a href="index.html#process" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">烧制过程</a>
+        <a href="index.html#masters" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">大师风采</a>
+        <a href="index.html#contact" class="py-2 px-4 rounded-md hover:bg-celadon-light text-celadon-primary">联系我们</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- 大师详情头部 -->
+  <section class="pt-28 pb-16 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col md:flex-row gap-8 items-center">
+        <div class="w-full md:w-1/3">
+          <div class="rounded-xl overflow-hidden shadow-lg hover-scale">
+            <img src="./master/鲁.png" alt="青瓷大师李师傅" class="w-full h-63 object-cover">
+          </div>
+        </div>
+        <div class="w-full md:w-2/3">
+          <h1 class="text-[clamp(1.8rem,3vw,2.5rem)] font-bold text-celadon-dark mb-4">鲁晓敏</h1>
+          <div class="flex items-center text-gray-600 mb-6">
+            <i class="fa fa-trophy text-celadon-primary mr-2"></i>
+            <span>中国作家协会会员</span>
+            <span class="mx-3">|</span>
+            <i class="fa fa-calendar text-celadon-primary mr-2"></i>
+            <span></span>
+          </div>
+          <p class="text-gray-700 mb-6 leading-relaxed">
+            浙江松阳人，中国作家协会会员，浙江省作协理事，浙江省散文学会副会长，《中国国家地理》杂志特约撰稿人。在各级刊物上发表了200多万字的文学作品。致力于传统村落、乡土建筑、廊桥文化的研究及保护工作。出版有《辛亥江南》（主笔）《江南秘境：松阳传统村落》《江南之盛》《潦草集》《历史大视野中的传统松阳》等散文集。
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-1 bg-celadon-light text-celadon-primary rounded-full text-sm">现代青瓷设计</span>
+            <span class="px-4 py-1 bg-celadon-light text-celadon-primary rounded-full text-sm">釉料创新</span>
+            <span class="px-4 py-1 bg-celadon-light text-celadon-primary rounded-full text-sm">跨界合作</span>
+            <span class="px-4 py-1 bg-celadon-light text-celadon-primary rounded-full text-sm">文创产品开发</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 大师简介 -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-celadon-dark mb-8 text-center">大师简介</h2>
+      <div class="max-w-3xl mx-auto bg-white p-8 rounded-xl shadow-md">
+        <div class="prose max-w-none">
+          <p class="mb-4 text-gray-700 leading-relaxed">
+            作为《中国国家地理》特约撰稿人，他在书写浙南乡土时，常将青瓷元素自然嵌入地域文化叙事。松阳传统村落中留存的窑工后裔记忆、廊桥石雕上的瓷器纹样，这些散落在民间的青瓷碎片，通过其文学性的梳理与呈现，得以纳入更广阔的江南文化图景。这种将青瓷置于村落肌理、商贸网络中的观察视角，虽非专门研究，却为理解青瓷文化的 “活态传承” 提供了社会学层面的参照。
+          </p>
+          <p class="mb-4 text-gray-700 leading-relaxed">
+            他对传统村落整体性保护的倡导，实则守护了青瓷文化存续的生态根基。龙泉青瓷从矿土开采到龙窑烧制，历来与乡村自然环境、工匠社群密不可分。当传统村落的风貌与社群结构得到妥善保护，青瓷文化所依赖的生存土壤便得以留存，为这门古老技艺的延续提供了不可或缺的生态支撑。
+          </p>
+          <p class="text-gray-700 leading-relaxed">
+            “龙泉青瓷一定要找到适合自己发展的路。” 他语气坚定，“必须两条腿走路：一级走高端收藏路线，由名家大师精研创作，代表龙泉青瓷的艺术巅峰；另一级则走回日用瓷路线，让青瓷重新融入现代人的日常。”
+          </p>
+            <p class="text-gray-700 leading-relaxed">
+           “困境是常态，但否极泰来是规律。”访谈的最后，鲁老师启示道，“你们记录传统的每一笔，都是功德无量。”
+          </p>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 返回列表 -->
+  <section class="py-12 bg-celadon-light/30">
+    <div class="container mx-auto px-4 text-center">
+      <a href="index.html#masters" class="inline-flex items-center text-celadon-primary hover:text-celadon-dark transition-colors font-medium">
+        <i class="fa fa-arrow-left mr-2"></i> 返回大师列表
+      </a>
+    </div>
+  </section>
+
+  <!-- 页脚 -->
+  <footer class="bg-celadon-dark text-white py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div>
+          <h3 class="text-lg font-semibold mb-4">龙窑青韵</h3>
+          <p class="text-gray-300 mb-4">
+            致力于传承和弘扬青瓷文化，探索传统工艺的当代表达
+          </p>
+          <div class="flex space-x-4">
+                <a href="https://weibo.com/u/6877043278" class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center text-celadon-primary hover:bg-celadon-primary hover:text-white transition-colors">
+                  <i class="fa fa-weibo"></i>
+                </a>
+                <a href="https://mp.weixin.qq.com/s/Svc4TknmBlT9J4_2A8J44w" class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center text-celadon-primary hover:bg-celadon-primary hover:text-white transition-colors">
+                  <i class="fa fa-weixin"></i>
+                </a>
+                <a href="https://www.xiaohongshu.com/user/profile/66921859000000000f0361cb?xsec_token=ABGn3pgbkM5eNL8i0MQxDYkdvZK5-S8IlnPYrvHSk5X2g%3D&xsec_source=pc_search" class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center text-celadon-primary hover:bg-celadon-primary hover:text-white transition-colors">
+                  <i class="fa fa-book"></i> <!-- 小红书图标 -->
+                </a>
+                <a href="https://space.bilibili.com/3546913378929323?spm_id_from=333.337.search-card.all.click" class="w-10 h-10 bg-celadon-primary/10 rounded-full flex items-center justify-center text-celadon-primary hover:bg-celadon-primary hover:text-white transition-colors">
+                  <i class="fa fa-play-circle"></i> <!-- B站图标 -->
+                </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">快速链接</h3>
+          <ul class="space-y-2">
+            <li><a href="index.html#team" class="text-gray-300 hover:text-white transition-colors">团队介绍</a></li>
+            <li><a href="index.html#process" class="text-gray-300 hover:text-white transition-colors">烧制过程</a></li>
+            <li><a href="index.html#masters" class="text-gray-300 hover:text-white transition-colors">大师风采</a></li>
+            <li><a href="index.html#contact" class="text-gray-300 hover:text-white transition-colors">联系我们</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+          <ul class="space-y-2">
+            <li class="flex items-center">
+              <i class="fa fa-envelope mr-2 text-gray-300"></i>
+              <span class="text-gray-300">chenweicheng101@163.com</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-weixin mr-2 text-gray-300"></i>
+              <span class="text-gray-300">龙窑青韵队</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fa fa-map-marker mr-2 text-gray-300"></i>
+              <span class="text-gray-300">浙江省龙泉市</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-semibold mb-4">订阅更新</h3>
+          <p class="text-gray-300 mb-4">
+            订阅我们的通讯，获取最新的青瓷文化资讯和团队动态
+          </p>
+          <form class="flex">
+            <input type="email" placeholder="您的邮箱地址" class="px-4 py-2 rounded-l-md focus:outline-none text-gray-800 w-full">
+            <button type="submit" class="bg-celadon-primary hover:bg-celadon-primary/80 text-white px-4 py-2 rounded-r-md transition-colors">
+              <i class="fa fa-paper-plane"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-700 mt-10 pt-6 text-center text-gray-400">
+        <p>© 2025 龙窑青韵队. 保留所有权利。</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- 返回顶部按钮 -->
+  <button id="back-to-top" class="fixed bottom-6 right-6 bg-celadon-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-celadon-dark">
+    <i class="fa fa-arrow-up"></i>
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    // 导航栏滚动效果
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('back-to-top');
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2', 'shadow-md');
+        navbar.classList.remove('py-3', 'shadow-sm');
+        backToTop.classList.remove('opacity-0', 'invisible');
+        backToTop.classList.add('opacity-100', 'visible');
+      } else {
+        navbar.classList.add('py-3', 'shadow-sm');
+        navbar.classList.remove('py-2', 'shadow-md');
+        backToTop.classList.add('opacity-0', 'invisible');
+        backToTop.classList.remove('opacity-100', 'visible');
+      }
+    });
+    
+    // 移动端菜单切换
+    menuToggle.addEventListener('click', function() {
+      mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 返回顶部
+    backToTop.addEventListener('click', function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if(targetId.startsWith('index.html#')) {
+          window.location.href = targetId;
+        } else {
+          document.querySelector(targetId).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
